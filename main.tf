@@ -47,3 +47,15 @@ resource "azurerm_storage_account" "storage_account" {
   account_tier = 
   location = azurerm_resource_group.rg_landingpage
 }
+
+resource "azurerm_virtual_machine" "virtual_machine" {
+  name = 
+  network_interface_ids = [  ]
+  storage_os_disk {
+    name = 
+    create_option = 
+  }
+  resource_group_name = 
+  vm_size = 
+  location = 
+}
