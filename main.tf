@@ -59,3 +59,15 @@ resource "azurerm_virtual_machine" "virtual_machine" {
   vm_size = 
   location = 
 }
+
+resource "azurerm_virtual_machine" "virtual_machine_two" {
+  name = "just_a_vm"
+  network_interface_ids = [  ]
+  storage_os_disk {
+    name = 
+    create_option = 
+  }
+  resource_group_name = azurerm_resource_group.rg_landingpage.name
+  vm_size = 
+  location = azurerm_resource_group.rg_landingpage.location
+}
